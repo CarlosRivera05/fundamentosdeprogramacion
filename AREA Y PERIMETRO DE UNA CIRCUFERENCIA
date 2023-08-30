@@ -1,0 +1,17 @@
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+    float perimetro,r,area,p=3.141592;
+    cout<<"Ingresar radio de la cicruferencia: "<<endl;
+    cin>>r;
+    
+    perimetro= 2*p*r;
+    area=p*pow(r,2);
+   
+    cout<<"El perimetro de la circuferencia es de: "<<perimetro<<endl;
+    cout<<"El area de la circuferencia es de : "<<area<<endl;
+}
