@@ -1,0 +1,20 @@
+
+#include <iostream>Ç
+using namespace std;
+
+
+int main()
+{
+	int N, acum = 1, i;
+
+	do {
+		cout << "Ingrese el numero de elementos: ";
+		cin >> N;
+	} while (N < 0);
+
+	for (i = 2; i <= N; i++) {
+		acum = acum * i;
+	}
+	cout << "El factorial de " << N << "es: "<<acum;
+	return 0;
+}
