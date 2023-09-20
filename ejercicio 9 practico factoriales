@@ -1,0 +1,25 @@
+#include <iostream>Ç
+using namespace std;
+
+
+int main()
+{
+	float  N, acum = 0, i, X, signo = 1, f = 1;
+
+	do {
+		cout << "Ingrese el numero de elementos: ";
+		cin >> N;
+	} while (N < 0);
+	do {
+		cout << "Ingrese el valor de la serie X ";
+		cin >> X;
+	} while (N < 0);
+
+	for (i = 1; i <= N; i++) {
+		acum = acum +signo*pow(X,i)/f;
+		f = f * (i+1);
+		signo = -signo;
+	}
+	cout << "La sumatoria es  " <<acum;
+	return 0;
+}
