@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+ {  float  promedio,Nota1,Nota2,Nota3,suma,N,i,promedio2;
+   cout<<"Ingrese numero de alumnos "<<endl;
+   cin>>N;
+      for (i=1;i<=N;i++){
+          cout<<"Ingreese las notas del alumno "<<i<<endl;
+          cout<<"                             "<<endl;
+          cout<<"Ingrese las notas del "<<i<<" alumno"<<endl;
+          cin>>Nota1>>Nota2>>Nota3;
+          promedio=(Nota1+Nota2+Nota3)/3;
+          promedio2=promedio+promedio2;}
+      suma=promedio2/N;
+   cout<<"El promedio de los alumnos es de "<<suma<<endl;return 0;}
