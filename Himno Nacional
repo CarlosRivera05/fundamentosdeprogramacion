@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout<<" Al estruendo marcial que ayer fuera y al clamor de la guerra horroroso,siguen hoy en contraste armonioso,dulces himnos de paz"<<endl;
+    cout<<"   y al clamor de la guerra horroroso, siguen hoy en contraste armonioso, "<<endl;
+    cout<<"dulces himnos de paz y de unión."<<endl;
+  
+
+    return 0;
+}
