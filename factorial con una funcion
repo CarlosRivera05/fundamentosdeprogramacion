@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+
+int factorial(int Numero);
+int main()
+{
+    int n;
+    do{
+    cout << "Ingresar el numero al que quieras calcular factorial" << endl;
+    cin >> n;
+    } while (n < 0);
+      
+
+    cout << "El valor factorail de " << n << "es:" << factorial(n) << endl;
+    
+}
+
+int factorial(int Numero)
+{
+    int  fact = 1;
+        
+    for (int i = 2; i <= Numero ; i++) {
+        fact = fact * i;
+    }
+        
+        return fact;
+    
+
+}
