@@ -1,0 +1,26 @@
+#include <iostream>
+#include "math.h"
+
+using namespace std ;
+
+double redondear(double numero, int n);
+
+
+int main() {
+    double numero ,resultado;
+    int decimales;
+    
+    cout<<"Ingrese el numero  que quiera redondear "<<endl;
+    cin>>numero;
+    cout<<"Ingresea cuantos decimales "<<endl;
+    cin>>decimales;
+    
+     resultado = redondear(numero, decimales);
+    cout << resultado <<endl; 
+    return 0;
+}
+
+double redondear (double numero ,int n ){
+    double factor = pow(10, n);
+    return round(numero * factor) / factor;
+}
