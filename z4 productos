@@ -1,0 +1,82 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+void agregarVenta(vector<string>& productos, vector<double>& ventas);
+double calcularVentasTotales(const vector<double>& ventas);
+void mostrarVentas(const vector<string>& productos, const vector<double>& ventas);
+
+int main() {
+    vector<string> productos;
+    vector<double> ventas;
+
+    while (true) {
+        cout << "1. Agregar una venta" << endl;
+        cout << "2. Mostrar ventas totales" << endl;
+        cout << "3. Mostrar ventas por producto" << endl;
+        cout << "4. Salir" << endl;
+
+        int opcion;
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            agregarVenta(productos, ventas);
+            cout << "Venta agregada exitosamente." << endl;
+            break;
+
+        case 2: {
+            double totalVentas = calcularVentasTotales(ventas);
+            cout << "Ventas totales realizadas: $" << totalVentas << endl;
+            break;
+        }
+
+        case 3:
+            mostrarVentas(productos, ventas);
+            break;
+
+        case 4:
+            cout << "Saliendo del programa. ¡Hasta luego!" << endl;
+            return 0;
+
+        default:
+            cout << "Opción no válida. Por favor, elija una opción válida." << endl;
+        }
+    }
+
+    return 0;
+}
+
+
+void agregarVenta(vector<string>& productos, vector<double>& ventas) {
+    string producto;
+    double venta;
+
+    cout << "Ingrese el nombre del producto: ";
+    cin.ignore();
+    getline(cin, producto);
+
+    cout << "Ingrese el monto de la venta: $";
+    cin >> venta;
+
+    productos.push_back(producto);
+    ventas.push_back(venta);
+}
+double calcularVentasTotales(const vector<double>& ventas) {
+    double total = 0.0;
+
+    for (double venta : ventas) {
+        total += venta;
+    }
+
+    return total;
+}
+
+
+void mostrarVentas(const vector<string>& productos, const vector<double>& ventas) {
+    cout << "Ventas por producto:" << endl;
+
+    for (size_t i = 0; i < productos.size(); i++) {
+        cout << "Producto: " << productos[i] << ", Venta: $" << ventas[i] << endl;
+    }
+}
